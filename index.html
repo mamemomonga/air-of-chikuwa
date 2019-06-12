@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+
+<title>ちくわの空気</title>
+
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+
+var chikuwa="天気いいから、嫌なこと忘れて屋上とかで寝転がってチクワ咥えて深呼吸とかするといいよ。空気がチクワの味になる。チクワを食べてないのにチクワ味が楽しめる。１５分くらいで全体的に乾燥してきて味しなくなるけど、唾でぬらせばまたチクワ味の空気が復活する。チクワを咥えながらチクワ味の空気のようにお金も増えたらいいなって青い空と雲を見ながら考える。きっとすごいアイディアが浮かぶ。もし浮かばなくてもチクワ味が楽しめるし嫌なこともちょと忘れられる。";
+
+function run() {
+	$('#chikuwa').text(chikuwa);	
+}
+
+function kakou() {
+	var source=$('#genryou').val();
+	$('#chikuwa').text(chikuwa.replace(/チクワ/g,source));
+}
+
+$(function(){ run() });
+
+
+//]]></script>
+
+<style type="text/css">
+	body {
+		font-size: 12px;
+		font-family: sans-serif;
+	}
+	.container {
+	}
+	#chikuwa {
+			width: 80%;
+			height: 100%;
+			padding: 20px;
+			background-color:#EEEEEE;
+			font-size:30px;
+	}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>ちくわの空気</h1>
+
+原料: <input type="text" width="30" id="genryou" value="チクワ">　<input type="button" value="加工" onClick="kakou()"><br>
+<div id="chikuwa">ちくわ</div>
+
+</div>
+
+</body>
+</html>
